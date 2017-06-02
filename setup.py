@@ -1,10 +1,17 @@
+import codecs
+from os.path import dirname, join, abspath
+
 from setuptools import setup
 
-from xlrd.info import __VERSION__
+here = abspath(dirname(__file__))
+
+about = {}
+with codecs.open(join(here, 'xlrd', '__version__.py'), 'r') as f:
+    exec(f.read(), about)
 
 setup(
     name = 'xlrd',
-    version = __VERSION__,
+    version = about['__VERSION__'],
     author = 'John Machin',
     author_email = 'sjmachin@lexicon.net',
     url = 'http://www.python-excel.org/',
