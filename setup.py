@@ -9,7 +9,7 @@ with open(join(here, "xlrd", "__version__.py")) as f:
     exec(f.read(), about)
 
 setup(
-    name = 'xlrd',
+    name = '3stack-xlrd',
     version = about['__VERSION__'],
     author = 'John Machin',
     author_email = 'sjmachin@lexicon.net',
